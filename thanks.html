@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanks — Flow Factory</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12171d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312171d'/%3E%3Cpath d='M7 12h18l-2 5H9z' fill='none' stroke='%23e8983a' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M11 17v5M21 17v5' stroke='%23e8983a' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root { --bg:#12171d; --ink:#f3f1ea; --muted:#9aa6b2; --accent:#e8983a; --line:#2a333d; --card:#1a212a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: grid; place-items: center; padding: 32px 20px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(120% 80% at 85% -10%, rgba(232,152,58,.14), transparent 55%),
+                      radial-gradient(90% 70% at 10% 110%, rgba(111,147,163,.12), transparent 60%);
+  }
+  .card { max-width: 540px; text-align: center; }
+  .check {
+    width: 74px; height: 74px; margin: 0 auto 26px; border-radius: 50%;
+    background: rgba(232,152,58,.14); border: 1.5px solid rgba(232,152,58,.4);
+    display: grid; place-items: center;
+  }
+  .check svg { width: 36px; height: 36px; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  h1 { font-family: "Helvetica Neue","Arial Black",system-ui,sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px,6vw,44px); line-height: 1.05; margin: 0; text-wrap: balance; }
+  p.sub { color: var(--muted); font-size: 18px; line-height: 1.55; margin: 18px 0 0; }
+  .next { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 30px 0 0; text-align: left; }
+  .next h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 0 0 14px; }
+  .next ol { margin: 0; padding-left: 20px; }
+  .next li { margin: 9px 0; line-height: 1.5; }
+  .next li::marker { color: var(--accent); font-weight: 700; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 30px 0 0; }
+  .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 22px; border-radius: 10px; font-weight: 700; font-size: 16px; text-decoration: none; transition: transform .18s ease, filter .18s ease; }
+  .btn-primary { background: var(--accent); color: #17120a; }
+  .btn-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  .btn-ghost { color: var(--ink); border: 1px solid rgba(243,241,234,.25); }
+  .btn-ghost:hover { border-color: rgba(243,241,234,.55); }
+  .brand { margin: 34px 0 0; font-family: "Helvetica Neue",Arial,sans-serif; font-weight: 800; letter-spacing: -.01em; font-size: 17px; }
+  .brand span { color: var(--accent); }
+  .tag { color: var(--muted); font-size: 13px; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="check" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#e8983a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <p class="eyebrow">Request received</p>
+    <h1>Thanks — we've got it.</h1>
+    <p class="sub">Your estimate request is in. A member of the Flow Factory team will reach out shortly to get you a free, no-pressure quote.</p>
+
+    <div class="next">
+      <h2>What happens next</h2>
+      <ol>
+        <li>We review your details (and photos, if you sent them).</li>
+        <li>We reach out by phone or email — usually same or next business day.</li>
+        <li>We set a time, take a look, and get you an honest, itemized price.</li>
+      </ol>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+14058028704">Need it sooner? Call 405-802-8704</a>
+      <a class="btn btn-ghost" href="/">Back to site</a>
+    </div>
+
+    <div class="brand">Flow<span>Factory</span></div>
+    <div class="tag">Business done right · Licensed &amp; insured · Oklahoma</div>
+  </div>
+</body>
+</html>

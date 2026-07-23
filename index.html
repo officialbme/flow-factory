@@ -430,11 +430,12 @@
           </div>
         </div>
 
-        <form id="estimate" action="https://formsubmit.co/flowfactoryokc@gmail.com" method="POST">
+        <form id="estimate" action="https://formsubmit.co/flowfactoryokc@gmail.com" method="POST" enctype="multipart/form-data">
           <!-- FormSubmit settings: no signup needed. First submission triggers a one-time confirmation email. -->
           <input type="hidden" name="_subject" value="New gutter estimate request — Flow Factory">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://flowfactoryteam.com/thanks.html">
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="row2">
             <div class="field">
@@ -451,19 +452,50 @@
             <input id="email" name="Email" type="email" autocomplete="email">
           </div>
           <div class="field">
-            <label for="service">What do you need?</label>
-            <select id="service" name="Service">
-              <option>Seamless gutters (new install)</option>
-              <option>Gutter guards</option>
-              <option>Gutter repair / re-hang</option>
-              <option>Gutter cleaning</option>
-              <option>Not sure — need advice</option>
-              <option>Siding, paint, or fascia</option>
-            </select>
+            <label for="address">Property address</label>
+            <input id="address" name="Property address" type="text" autocomplete="street-address" placeholder="Street, City — so we can size the job">
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="service">What do you need?</label>
+              <select id="service" name="Service">
+                <option>Seamless gutters (new install)</option>
+                <option>Gutter guards</option>
+                <option>Gutter repair / re-hang</option>
+                <option>Gutter cleaning</option>
+                <option>Not sure — need advice</option>
+                <option>Siding, paint, or fascia</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timeline">How soon?</label>
+              <select id="timeline" name="Timeline">
+                <option>As soon as possible</option>
+                <option>Within 2 weeks</option>
+                <option>This month</option>
+                <option>Just getting pricing</option>
+              </select>
+            </div>
           </div>
           <div class="field">
-            <label for="msg">Tell us about the project</label>
-            <textarea id="msg" name="Details" placeholder="Address, what's going on, and the best time to reach you…"></textarea>
+            <label for="photos">Photos of your gutters <span style="color:var(--muted);font-weight:400;">(optional — speeds up your quote)</span></label>
+            <input id="photos" name="attachment" type="file" accept="image/*" multiple>
+          </div>
+          <div class="field">
+            <label for="msg">Anything else?</label>
+            <textarea id="msg" name="Details" placeholder="What's going on, gate codes, and the best time to reach you…"></textarea>
+          </div>
+          <div class="field">
+            <label for="heard">How did you hear about us? <span style="color:var(--muted);font-weight:400;">(optional)</span></label>
+            <select id="heard" name="Heard about us">
+              <option value="">Select…</option>
+              <option>Google search</option>
+              <option>Referral / word of mouth</option>
+              <option>Saw our truck or sign</option>
+              <option>Social media</option>
+              <option>Repeat customer</option>
+              <option>Other</option>
+            </select>
           </div>
           <button class="btn btn-primary" type="submit">Request my free estimate</button>
           <p class="form-note">Sends straight to Flow Factory — we'll reply fast. Prefer to talk? Call <a href="tel:+14058028704" style="color:var(--accent);font-weight:600;">405-802-8704</a>.</p>
