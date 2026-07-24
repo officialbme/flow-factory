@@ -120,7 +120,15 @@
     padding: 9px 16px; border-radius: 8px; font-weight: 700 !important; font-size: 14.5px !important;
   }
   .nav-cta:hover { filter: brightness(1.05); }
-  @media (max-width: 760px) { .nav-links a:not(.nav-cta) { display: none; } }
+  .nav-login {
+    display: inline-flex; align-items: center; gap: 7px;
+    color: var(--ink) !important; border: 1px solid var(--line);
+    padding: 8px 14px; border-radius: 8px; font-weight: 600 !important; font-size: 14.5px !important;
+    transition: border-color .18s ease, color .18s ease;
+  }
+  .nav-login:hover { border-color: var(--accent); color: var(--accent) !important; }
+  .nav-login svg { width: 14px; height: 14px; }
+  @media (max-width: 760px) { .nav-links a:not(.nav-cta):not(.nav-login) { display: none; } }
 
   /* ---------- HERO ---------- */
   .hero {
@@ -280,6 +288,10 @@
       <a href="#why">Why us</a>
       <a href="#process">Process</a>
       <a href="#area">Service area</a>
+      <a class="nav-login" href="https://app.flowfactoryteam.com" aria-label="Team log in">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Log in
+      </a>
       <a class="nav-cta" href="#contact">Get a free estimate</a>
     </nav>
   </div>
@@ -511,9 +523,10 @@
       <span class="brand-name">Flow<span style="color:var(--hero-accent);">Factory</span></span>
     </a>
     <div class="foot-legal">Business done right · Licensed &amp; insured · Oklahoma</div>
-    <div style="display:flex;gap:22px;">
+    <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;">
       <a href="tel:+14058028704" class="num">405-802-8704</a>
       <a href="mailto:flowfactoryokc@gmail.com">flowfactoryokc@gmail.com</a>
+      <a href="https://app.flowfactoryteam.com" style="color:var(--hero-accent);font-weight:600;">Team portal →</a>
     </div>
   </div>
 </footer>
