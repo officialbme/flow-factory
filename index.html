@@ -222,6 +222,13 @@
   .card h3 { margin: 0 0 8px; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
   .card p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.55; }
   .card .ico svg { width: 24px; height: 24px; }
+  /* recent-work gallery */
+  .work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .work-item { position: relative; border-radius: 14px; overflow: hidden; background: var(--surface-2); aspect-ratio: 4 / 3; box-shadow: var(--shadow); }
+  .work-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+  .work-item:hover img { transform: scale(1.05); }
+  .work-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 12px 10px; font-size: 13.5px; font-weight: 600; color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,.72), transparent); }
 
   /* stats / credibility */
   .band { background: var(--surface-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -433,6 +440,18 @@
     </div>
   </section>
 
+  <!-- RECENT WORK (auto-populated from the Telegram photo feed; hidden until there are photos) -->
+  <section id="work" hidden>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Recent work</p>
+        <h2 class="display">Straight off our trucks.</h2>
+        <p>Real jobs, fresh from the crew — gutters and permanent lighting across the OKC metro.</p>
+      </div>
+      <div id="work-grid" class="work-grid"></div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
@@ -546,6 +565,28 @@
     </div>
   </div>
 </footer>
+<script>
+  // Recent-work gallery — pulls the public photo feed the Telegram bot writes to.
+  // Static site + public Supabase object = no backend call of ours needed.
+  (function () {
+    var FEED = 'https://pdyosyomuxbvwmbzppng.supabase.co/storage/v1/object/public/gallery/index.json';
+    fetch(FEED + '?t=' + Math.floor(Date.now() / 60000)).then(function (r) { return r.ok ? r.json() : []; }).then(function (items) {
+      if (!Array.isArray(items) || !items.length) return;
+      var grid = document.getElementById('work-grid');
+      items.slice(0, 12).forEach(function (it) {
+        if (!it || !it.url) return;
+        var fig = document.createElement('figure');
+        fig.className = 'work-item';
+        var img = document.createElement('img');
+        img.loading = 'lazy'; img.src = it.url; img.alt = it.caption || 'Flow Factory recent work';
+        fig.appendChild(img);
+        if (it.caption) { var c = document.createElement('figcaption'); c.className = 'work-cap'; c.textContent = it.caption; fig.appendChild(c); }
+        grid.appendChild(fig);
+      });
+      document.getElementById('work').hidden = false;
+    }).catch(function () { /* no gallery yet — section stays hidden */ });
+  })();
+</script>
 </body>
 </html>
 
