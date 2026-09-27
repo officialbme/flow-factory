@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://flowfactoryteam.com/">
 <meta property="og:image" content="https://flowfactoryteam.com/assets/ff-mark.jpg">
 <meta name="theme-color" content="#12171d">
-<link rel="icon" type="image/jpeg" href="assets/ff-mark.jpg">
+<link rel="icon" type="image/png" href="assets/ff-mark.png">
 <style>
   :root {
     --bg: #edeae3;
@@ -114,12 +114,12 @@
   .brand-name span { color: var(--accent); }
   /* Real logo images. The files are black-on-white, so multiply drops the white
      into a light backdrop; in dark mode we invert to white + screen drops the black. */
-  .brand-logo { height: 40px; width: auto; display: block; mix-blend-mode: multiply; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-logo { filter: invert(1); mix-blend-mode: screen; } }
-  :root[data-theme="dark"] .brand-logo { filter: invert(1); mix-blend-mode: screen; }
-  :root[data-theme="light"] .brand-logo { filter: none; mix-blend-mode: multiply; }
+  .brand-logo { height: 36px; width: auto; display: block; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-logo { filter: invert(1); } }
+  :root[data-theme="dark"] .brand-logo { filter: invert(1); }
+  :root[data-theme="light"] .brand-logo { filter: none; }
   /* Footer sits on the dark hero background always → white logo. */
-  .foot-logo { height: 46px; width: auto; display: block; filter: invert(1); mix-blend-mode: screen; }
+  .foot-logo { height: 40px; width: auto; display: block; filter: invert(1); }
   .nav-links { display: flex; align-items: center; gap: 28px; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
   .nav-links a:hover { color: var(--ink); }
@@ -289,7 +289,7 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Flow Factory home">
-      <img class="brand-logo" src="assets/ff-logo.webp" alt="Flow Factory" />
+      <img class="brand-logo" src="assets/ff-logo.png" alt="Flow Factory" />
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
@@ -536,7 +536,7 @@
 <footer>
   <div class="wrap foot-inner">
     <a class="brand" href="#top" style="text-decoration:none;">
-      <img class="foot-logo" src="assets/ff-logo.webp" alt="Flow Factory" />
+      <img class="foot-logo" src="assets/ff-logo.png" alt="Flow Factory" />
     </a>
     <div class="foot-legal">Business done right · Licensed &amp; insured · Oklahoma</div>
     <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;">
