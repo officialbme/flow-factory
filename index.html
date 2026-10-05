@@ -10,7 +10,7 @@
 <meta property="og:title" content="Flow Factory — Seamless Gutters & Permanent Lighting in Oklahoma">
 <meta property="og:description" content="Seamless gutters, guards, repairs & permanent roofline lighting across the OKC metro. 20+ years, licensed & insured. Free estimates.">
 <meta property="og:url" content="https://flowfactoryteam.com/">
-<meta property="og:image" content="https://flowfactoryteam.com/assets/ff-mark.jpg">
+<meta property="og:image" content="https://flowfactoryteam.com/assets/lighting-dusk.jpg">
 <meta name="theme-color" content="#12171d">
 <link rel="icon" type="image/png" href="assets/ff-mark.png">
 <style>
@@ -133,9 +133,16 @@
   .lighting-points .dot { margin-top: 9px; }
   .lighting-points strong { color: var(--hero-ink); font-weight: 700; }
   .lighting-points div { color: var(--hero-muted); font-size: 15.5px; line-height: 1.5; }
-  .lighting-visual { border-radius: 18px; overflow: hidden; border: 1px solid var(--hero-line);
-    box-shadow: 0 34px 70px -28px rgba(0,0,0,.65); aspect-ratio: 4 / 3; background: #0b0f14; }
-  .lighting-visual img, .lighting-art { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lighting-visual { display: grid; gap: 12px; }
+  .lighting-visual figure { position: relative; margin: 0; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 30px 60px -26px rgba(0,0,0,.6); }
+  .lighting-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lighting-visual .lv-main img { aspect-ratio: 16 / 10; }
+  .lv-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .lv-row img { aspect-ratio: 3 / 4; }
+  .lighting-visual figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 12px 9px;
+    font-size: 12.5px; font-weight: 600; color: #fff; letter-spacing: .01em;
+    background: linear-gradient(to top, rgba(0,0,0,.72), transparent); }
   @media (max-width: 820px) { .lighting-inner { grid-template-columns: 1fr; gap: 32px; } }
   .nav-links { display: flex; align-items: center; gap: 28px; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
@@ -410,33 +417,20 @@
         </div>
       </div>
       <div class="lighting-visual">
-        <!-- PHOTO SLOT: swap this whole <svg> for <img src="assets/lighting-dusk.jpg" alt="Home with permanent roofline lighting at dusk"> when the photo is ready -->
-        <svg class="lighting-art" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A home lit with permanent roofline lighting at night">
-          <defs>
-            <radialGradient id="sky" cx="70%" cy="20%" r="90%">
-              <stop offset="0%" stop-color="#1c2634"/><stop offset="100%" stop-color="#0b0f14"/>
-            </radialGradient>
-            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-              <feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-          <rect width="480" height="340" fill="url(#sky)"/>
-          <!-- house silhouette -->
-          <path d="M60 300 L60 180 L150 120 L240 180 L240 300 Z" fill="#0f141b" stroke="#2a333d" stroke-width="1.5"/>
-          <path d="M240 300 L240 200 L330 150 L420 200 L420 300 Z" fill="#11171f" stroke="#2a333d" stroke-width="1.5"/>
-          <rect x="95" y="215" width="34" height="46" rx="3" fill="#0b0f14" stroke="#2a333d"/>
-          <rect x="165" y="215" width="34" height="46" rx="3" fill="#0b0f14" stroke="#2a333d"/>
-          <rect x="300" y="225" width="30" height="40" rx="3" fill="#0b0f14" stroke="#2a333d"/>
-          <!-- glowing roofline lights -->
-          <g fill="#f4b45e" filter="url(#glow)">
-            <circle cx="64" cy="181" r="3"/><circle cx="82" cy="169" r="3"/><circle cx="100" cy="157" r="3"/><circle cx="118" cy="145" r="3"/><circle cx="136" cy="133" r="3"/>
-            <circle cx="150" cy="122" r="3.2"/>
-            <circle cx="166" cy="133" r="3"/><circle cx="184" cy="145" r="3"/><circle cx="202" cy="157" r="3"/><circle cx="220" cy="169" r="3"/><circle cx="238" cy="181" r="3"/>
-            <circle cx="258" cy="193" r="3"/><circle cx="282" cy="180" r="3"/><circle cx="306" cy="167" r="3"/><circle cx="330" cy="152" r="3.2"/>
-            <circle cx="354" cy="167" r="3"/><circle cx="378" cy="180" r="3"/><circle cx="402" cy="193" r="3"/>
-          </g>
-          <ellipse cx="240" cy="315" rx="220" ry="16" fill="#f4b45e" opacity="0.06"/>
-        </svg>
+        <figure class="lv-main">
+          <img src="assets/lighting-dusk.jpg" alt="Brick home with red, white & blue permanent roofline lighting at dusk" loading="lazy">
+          <figcaption>Game-day colors, dusk to dawn</figcaption>
+        </figure>
+        <div class="lv-row">
+          <figure>
+            <img src="assets/lighting-warm.jpg" alt="Home outlined in warm-white permanent roofline lighting at night" loading="lazy">
+            <figcaption>Warm white, every night</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/lighting-install.jpg" alt="Flow Factory installing permanent roofline lighting" loading="lazy">
+            <figcaption>Installed by our crew</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
