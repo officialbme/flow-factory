@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flow Factory — Seamless Gutters in Oklahoma | 20+ Years</title>
-<meta name="description" content="Flow Factory installs seamless gutters, gutter guards, and repairs across the Oklahoma City metro. 20+ years, 1,000,000+ ft installed, licensed & insured. Free estimates — call 405-802-8704.">
+<title>Flow Factory — Seamless Gutters & Permanent Lighting | Oklahoma</title>
+<meta name="description" content="Flow Factory installs seamless gutters, gutter guards, and permanent roofline LED lighting across the Oklahoma City metro. 20+ years, 1,000,000+ ft installed, licensed & insured. Free estimates — call 405-802-8704.">
 <link rel="canonical" href="https://flowfactoryteam.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Flow Factory — Seamless Gutters in Oklahoma">
-<meta property="og:description" content="Seamless gutters, guards & repairs across the OKC metro. 20+ years, licensed & insured. Free estimates.">
+<meta property="og:title" content="Flow Factory — Seamless Gutters & Permanent Lighting in Oklahoma">
+<meta property="og:description" content="Seamless gutters, guards, repairs & permanent roofline lighting across the OKC metro. 20+ years, licensed & insured. Free estimates.">
 <meta property="og:url" content="https://flowfactoryteam.com/">
 <meta property="og:image" content="https://flowfactoryteam.com/assets/ff-mark.jpg">
 <meta name="theme-color" content="#12171d">
@@ -120,6 +120,23 @@
   :root[data-theme="light"] .brand-logo { filter: none; }
   /* Footer sits on the dark hero background always → white logo. */
   .foot-logo { height: 40px; width: auto; display: block; filter: invert(1); }
+  /* ---------- PERMANENT LIGHTING ---------- */
+  .lighting { background: var(--hero-bg); color: var(--hero-ink); position: relative; overflow: hidden;
+    padding: 86px 0; border-top: 1px solid var(--hero-line); border-bottom: 1px solid var(--hero-line); }
+  .lighting::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(85% 75% at 82% 18%, rgba(232,152,58,.20), transparent 55%); }
+  .lighting-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: 50px; align-items: center; }
+  .lighting h2 { font-size: clamp(30px, 4.4vw, 48px); margin: 12px 0 0; color: var(--hero-ink); }
+  .lighting-sub { color: var(--hero-muted); max-width: 52ch; margin: 18px 0 0; font-size: 17px; line-height: 1.62; }
+  .lighting-points { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 15px; }
+  .lighting-points li { display: flex; gap: 12px; align-items: flex-start; }
+  .lighting-points .dot { margin-top: 9px; }
+  .lighting-points strong { color: var(--hero-ink); font-weight: 700; }
+  .lighting-points div { color: var(--hero-muted); font-size: 15.5px; line-height: 1.5; }
+  .lighting-visual { border-radius: 18px; overflow: hidden; border: 1px solid var(--hero-line);
+    box-shadow: 0 34px 70px -28px rgba(0,0,0,.65); aspect-ratio: 4 / 3; background: #0b0f14; }
+  .lighting-visual img, .lighting-art { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 820px) { .lighting-inner { grid-template-columns: 1fr; gap: 32px; } }
   .nav-links { display: flex; align-items: center; gap: 28px; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
   .nav-links a:hover { color: var(--ink); }
@@ -299,9 +316,9 @@
       <img class="brand-logo" src="assets/ff-logo.png" alt="Flow Factory" />
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
+      <a href="#services">Gutters</a>
+      <a href="#lighting">Lighting</a>
       <a href="#why">Why us</a>
-      <a href="#process">Process</a>
       <a href="#area">Service area</a>
       <a class="nav-login" href="https://app.flowfactoryteam.com" aria-label="Team log in">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
@@ -316,9 +333,9 @@
   <!-- HERO -->
   <section class="hero" style="padding:0;">
     <div class="wrap hero-inner">
-      <p class="eyebrow" style="color:var(--hero-accent);">Oklahoma seamless gutter specialists · Licensed &amp; insured</p>
-      <h1 class="display">Seamless gutters, <em>done right.</em></h1>
-      <p class="hero-sub">For 20+ years Flow Factory has kept Oklahoma homes dry — custom-formed seamless gutters, guards, and repairs that send water where it belongs. Straight lines, clean work, no cut corners.</p>
+      <p class="eyebrow" style="color:var(--hero-accent);">Seamless gutters &amp; permanent lighting · Oklahoma · Licensed &amp; insured</p>
+      <h1 class="display">Gutters &amp; permanent lighting, <em>done right.</em></h1>
+      <p class="hero-sub">For 20+ years Flow Factory has kept Oklahoma homes dry — and now we make them shine. Custom-formed seamless gutters and guards that send water where it belongs, plus permanent roofline LED lighting you run from your phone. Straight lines, clean work, no cut corners.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Get a free estimate</a>
         <a class="btn btn-ghost" href="tel:+14058028704">Call 405-802-8704</a>
@@ -326,6 +343,7 @@
       <div class="hero-badges">
         <span><i class="dot"></i> 20+ years in business</span>
         <span><i class="dot"></i> 1,000,000+ ft of gutter installed</span>
+        <span><i class="dot"></i> Permanent LED lighting</span>
         <span><i class="dot"></i> Licensed &amp; insured</span>
       </div>
     </div>
@@ -369,15 +387,57 @@
           <h3>Cleaning &amp; maintenance</h3>
           <p>Clear gutters and downspouts before storm season — spotting small problems before they become big ones.</p>
         </article>
-        <article class="card">
-          <div class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4"/><path d="M5 14h14"/><circle cx="7" cy="11" r="1"/><circle cx="11" cy="10.3" r="1"/><circle cx="15" cy="10.3" r="1"/><circle cx="19" cy="11" r="1"/></svg>
-          </div>
-          <h3>Permanent lighting</h3>
-          <p>Year-round LED lighting mounted along your roofline — holidays, game days, or everyday accent, set to any color and scheduled right from your phone.</p>
-        </article>
       </div>
       <p style="color:var(--muted);font-size:15.5px;margin:26px 0 0;">Flow Factory also handles <strong style="color:var(--ink);font-weight:600;">siding, paint, and fascia</strong> — just ask when you call.</p>
+    </div>
+  </section>
+
+  <!-- PERMANENT LIGHTING -->
+  <section id="lighting" class="lighting">
+    <div class="wrap lighting-inner">
+      <div class="lighting-copy">
+        <p class="eyebrow" style="color:var(--hero-accent);">Permanent lighting</p>
+        <h2 class="display">Lighting that lives on your roofline.</h2>
+        <p class="lighting-sub">Discreet LED track tucked under your eaves — invisible by day, stunning by night. Warm whites for everyday curb appeal, team colors for game day, red and green for the holidays. One app, every color, any schedule — and you never climb a ladder with a staple gun again.</p>
+        <ul class="lighting-points">
+          <li><i class="dot"></i><div><strong>Any color, any night.</strong> Millions of colors and warm whites, controlled right from your phone.</div></li>
+          <li><i class="dot"></i><div><strong>Set it and forget it.</strong> Schedule holidays, game days, and everyday accent — it runs itself.</div></li>
+          <li><i class="dot"></i><div><strong>Built in, not clipped on.</strong> Low-profile track mounts under the soffit or fascia — bare by day, brilliant at night.</div></li>
+          <li><i class="dot"></i><div><strong>Pro-grade &amp; weatherproof.</strong> UL-certified, IP68 waterproof, and Dark-Sky friendly — built to stay up for years.</div></li>
+        </ul>
+        <div class="hero-actions" style="margin-top:30px;">
+          <a class="btn btn-primary" href="#contact">Get a lighting estimate</a>
+        </div>
+      </div>
+      <div class="lighting-visual">
+        <!-- PHOTO SLOT: swap this whole <svg> for <img src="assets/lighting-dusk.jpg" alt="Home with permanent roofline lighting at dusk"> when the photo is ready -->
+        <svg class="lighting-art" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A home lit with permanent roofline lighting at night">
+          <defs>
+            <radialGradient id="sky" cx="70%" cy="20%" r="90%">
+              <stop offset="0%" stop-color="#1c2634"/><stop offset="100%" stop-color="#0b0f14"/>
+            </radialGradient>
+            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <rect width="480" height="340" fill="url(#sky)"/>
+          <!-- house silhouette -->
+          <path d="M60 300 L60 180 L150 120 L240 180 L240 300 Z" fill="#0f141b" stroke="#2a333d" stroke-width="1.5"/>
+          <path d="M240 300 L240 200 L330 150 L420 200 L420 300 Z" fill="#11171f" stroke="#2a333d" stroke-width="1.5"/>
+          <rect x="95" y="215" width="34" height="46" rx="3" fill="#0b0f14" stroke="#2a333d"/>
+          <rect x="165" y="215" width="34" height="46" rx="3" fill="#0b0f14" stroke="#2a333d"/>
+          <rect x="300" y="225" width="30" height="40" rx="3" fill="#0b0f14" stroke="#2a333d"/>
+          <!-- glowing roofline lights -->
+          <g fill="#f4b45e" filter="url(#glow)">
+            <circle cx="64" cy="181" r="3"/><circle cx="82" cy="169" r="3"/><circle cx="100" cy="157" r="3"/><circle cx="118" cy="145" r="3"/><circle cx="136" cy="133" r="3"/>
+            <circle cx="150" cy="122" r="3.2"/>
+            <circle cx="166" cy="133" r="3"/><circle cx="184" cy="145" r="3"/><circle cx="202" cy="157" r="3"/><circle cx="220" cy="169" r="3"/><circle cx="238" cy="181" r="3"/>
+            <circle cx="258" cy="193" r="3"/><circle cx="282" cy="180" r="3"/><circle cx="306" cy="167" r="3"/><circle cx="330" cy="152" r="3.2"/>
+            <circle cx="354" cy="167" r="3"/><circle cx="378" cy="180" r="3"/><circle cx="402" cy="193" r="3"/>
+          </g>
+          <ellipse cx="240" cy="315" rx="220" ry="16" fill="#f4b45e" opacity="0.06"/>
+        </svg>
+      </div>
     </div>
   </section>
 
