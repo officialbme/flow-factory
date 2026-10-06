@@ -420,6 +420,7 @@
         </ul>
         <div class="hero-actions" style="margin-top:30px;">
           <a class="btn btn-primary" href="#contact">Get a lighting estimate</a>
+          <a class="btn btn-ghost" href="gallery.html?filter=lighting">See lighting projects →</a>
         </div>
       </div>
       <div class="lighting-visual">
@@ -518,6 +519,9 @@
         <p>Real jobs, fresh from the crew — gutters and permanent lighting across the OKC metro.</p>
       </div>
       <div id="work-grid" class="work-grid"></div>
+      <div style="text-align:center;margin-top:32px;">
+        <a class="btn btn-primary" href="gallery.html" style="background:var(--accent);color:var(--on-accent);">View all our work →</a>
+      </div>
     </div>
   </section>
 
@@ -642,7 +646,7 @@
     fetch(FEED + '?t=' + Math.floor(Date.now() / 60000)).then(function (r) { return r.ok ? r.json() : []; }).then(function (items) {
       if (!Array.isArray(items) || !items.length) return;
       var grid = document.getElementById('work-grid');
-      items.slice(0, 12).forEach(function (it) {
+      items.slice(0, 6).forEach(function (it) {
         if (!it || !it.url) return;
         var fig = document.createElement('figure');
         fig.className = 'work-item';
