@@ -262,6 +262,11 @@
   .stat .n { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 50px); letter-spacing: -0.03em; line-height: 1; }
   .stat .n small { color: var(--accent); }
   .stat .l { color: var(--muted); font-size: 14.5px; margin-top: 10px; font-weight: 500; }
+  .why-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 46px; }
+  @media (max-width: 760px) { .why-points { grid-template-columns: 1fr; gap: 22px; } }
+  .why-points h4 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
+  .why-points h4::before { content: ""; display: block; width: 26px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 13px; }
+  .why-points p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
 
   /* process */
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); }
@@ -411,7 +416,7 @@
           <li><i class="dot"></i><div><strong>Any color, any night.</strong> Millions of colors and warm whites, controlled right from your phone.</div></li>
           <li><i class="dot"></i><div><strong>Set it and forget it.</strong> Schedule holidays, game days, and everyday accent — it runs itself.</div></li>
           <li><i class="dot"></i><div><strong>Built in, not clipped on.</strong> Low-profile track mounts under the soffit or fascia — bare by day, brilliant at night.</div></li>
-          <li><i class="dot"></i><div><strong>Pro-grade &amp; weatherproof.</strong> UL-certified, IP68 waterproof, and Dark-Sky friendly — built to stay up for years.</div></li>
+          <li><i class="dot"></i><div><strong>Pro-grade &amp; weatherproof.</strong> UL-certified, IP68 waterproof, Dark-Sky friendly, and rated for <strong>100,000+ hours</strong> — built to stay up for years.</div></li>
         </ul>
         <div class="hero-actions" style="margin-top:30px;">
           <a class="btn btn-primary" href="#contact">Get a lighting estimate</a>
@@ -466,6 +471,11 @@
           <div class="l">Estimates — always free</div>
         </div>
       </div>
+      <div class="why-points">
+        <div><h4>One crew, two trades</h4><p>Seamless gutters and permanent lighting from the same team you already trust — no subcontractors, no finger-pointing.</p></div>
+        <div><h4>Lighting done right</h4><p>Low-profile track color-matched to your home and run from an app that actually works. It looks factory-built, not clipped on — and it stays up year-round.</p></div>
+        <div><h4>Honest &amp; accountable</h4><p>Itemized pricing up front, licensed &amp; insured, tidy job sites, and workmanship we stand behind on every job.</p></div>
+      </div>
     </div>
   </section>
 
@@ -490,8 +500,8 @@
     <div class="wrap">
       <div class="sec-head" style="margin-bottom:0;">
         <p class="eyebrow">Service area</p>
-        <h2 class="display">Proudly serving Oklahoma.</h2>
-        <p>Based in Oklahoma and working throughout the OKC metro and surrounding communities. Not sure if you're in range? Just ask — a quick call settles it.</p>
+        <h2 class="display">Based in OKC. Serving all of Oklahoma.</h2>
+        <p>Headquartered in Oklahoma City and on the road statewide — from the heart of the metro to the small towns down the highway. If it's in Oklahoma, we'll get there. Not sure you're in range? One quick call settles it.</p>
         <div class="hero-actions" style="margin-top:26px;">
           <a class="btn btn-primary" href="#contact" style="background:var(--accent);color:var(--on-accent);">Check my area</a>
         </div>
