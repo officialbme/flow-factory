@@ -267,6 +267,13 @@
   .why-points h4 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
   .why-points h4::before { content: ""; display: block; width: 26px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 13px; }
   .why-points p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+  /* gutter work photos (parallels the lighting collage) */
+  .gut-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; }
+  @media (max-width: 760px) { .gut-grid { grid-template-columns: 1fr; } }
+  .gut-grid figure { position: relative; margin: 0; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .gut-grid img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; transition: transform .4s ease; }
+  .gut-grid figure:hover img { transform: scale(1.04); }
+  .gut-grid figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px 12px 10px; font-size: 13px; font-weight: 600; color: #fff; background: linear-gradient(to top, rgba(0,0,0,.72), transparent); }
 
   /* process */
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); }
@@ -400,6 +407,20 @@
           <h3>Cleaning &amp; maintenance</h3>
           <p>Clear gutters and downspouts before storm season — spotting small problems before they become big ones.</p>
         </article>
+      </div>
+      <div class="gut-grid">
+        <figure>
+          <img src="assets/gutters-1.jpg" alt="Musket-brown seamless gutters and downspout on a brick home" loading="lazy">
+          <figcaption>Musket-brown seamless — a crowd favorite</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gutters-2.jpg" alt="Installed gutter guards keeping leaves and debris out" loading="lazy">
+          <figcaption>Guards that keep the debris out</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gutters-3.jpg" alt="Freshly cleaned and sealed seamless gutter run" loading="lazy">
+          <figcaption>Cleaned, sealed, and dialed in</figcaption>
+        </figure>
       </div>
       <p style="color:var(--muted);font-size:15.5px;margin:26px 0 0;">Flow Factory also handles <strong style="color:var(--ink);font-weight:600;">siding, paint, and fascia</strong> — just ask when you call.</p>
     </div>
