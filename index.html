@@ -381,6 +381,15 @@
 
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
   img { max-width: 100%; height: auto; }
+
+  /* footer site links (services + areas) */
+  .foot-nav { border-top: 1px solid var(--hero-line); margin-top: 30px; padding-top: 28px; }
+  .foot-nav .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 720px) { .foot-nav .cols { grid-template-columns: 1fr 1fr; } }
+  .foot-nav h5 { color: var(--hero-ink); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
+  .foot-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .foot-nav a { color: var(--hero-muted); text-decoration: none; font-size: 14.5px; }
+  .foot-nav a:hover { color: var(--hero-ink); }
 </style>
 </head>
 <body>
@@ -711,6 +720,40 @@
       <a href="tel:+14058028704" class="num">405-802-8704</a>
       <a href="mailto:flowfactoryokc@gmail.com">flowfactoryokc@gmail.com</a>
       <a href="https://app.flowfactoryteam.com" style="color:var(--hero-accent);font-weight:600;">Team portal →</a>
+    </div>
+  </div>
+  <div class="wrap foot-nav">
+    <div class="cols">
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="seamless-gutters.html">Seamless gutters</a></li>
+          <li><a href="gutter-guards.html">Gutter guards</a></li>
+          <li><a href="permanent-lighting.html">Permanent lighting</a></li>
+          <li><a href="gutter-cleaning.html">Gutter cleaning</a></li>
+          <li><a href="gutter-repair.html">Gutter repair</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Service areas</h5>
+        <ul>
+          <li><a href="gutters-oklahoma-city.html">Oklahoma City</a></li>
+          <li><a href="gutters-edmond.html">Edmond</a></li>
+          <li><a href="gutters-norman.html">Norman</a></li>
+          <li><a href="gutters-moore.html">Moore</a></li>
+          <li><a href="gutters-yukon.html">Yukon</a></li>
+          <li><a href="gutters-mustang.html">Mustang</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#services">Gutters</a></li>
+          <li><a href="#lighting">Lighting</a></li>
+          <li><a href="gallery.html">Our work</a></li>
+          <li><a href="#contact">Free estimate</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
