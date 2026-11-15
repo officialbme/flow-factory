@@ -104,7 +104,12 @@
         var fig = document.createElement('figure');
         fig.className = 'g-item'; fig.style.margin = '0';
         var img = document.createElement('img');
-        img.loading = 'lazy'; img.src = it.url; img.alt = it.caption || 'Flow Factory work';
+        var altFallback = it.cat === 'lighting'
+          ? 'Permanent roofline LED lighting installed by Flow Factory in the Oklahoma City metro'
+          : it.cat === 'gutters'
+            ? 'Seamless gutter installation by Flow Factory in the Oklahoma City metro'
+            : 'Flow Factory gutters and permanent lighting work in the Oklahoma City metro';
+        img.loading = 'lazy'; img.src = it.url; img.alt = it.caption || altFallback;
         fig.appendChild(img);
         if (it.cat === 'gutters' || it.cat === 'lighting') {
           var tag = document.createElement('span');
