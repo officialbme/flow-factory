@@ -113,6 +113,9 @@
     --offset-col: #1a2028;
     --offset-sh: 6px 6px 0 var(--offset-col);
     --offset-sh-sm: 3px 3px 0 var(--offset-col);
+    /* orange buttons extrude in a deeper shade of themselves — reads on light OR dark */
+    --btn-3d: #8a5316;
+    --btn-3d-edge: #5c360c;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -246,10 +249,10 @@
     display: inline-flex; align-items: center; gap: 8px;
     background: var(--accent); color: var(--on-accent) !important;
     padding: 9px 16px; border-radius: 8px; font-weight: 700 !important; font-size: 14.5px !important;
-    border: 1.5px solid var(--offset-col); box-shadow: 3px 3px 0 var(--offset-col);
+    border: 1.5px solid var(--btn-3d-edge); box-shadow: 3px 3px 0 var(--btn-3d);
     transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
   }
-  .nav-cta:hover { filter: brightness(1.05); transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--offset-col); }
+  .nav-cta:hover { filter: brightness(1.05); transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--btn-3d); }
   .nav-login {
     display: inline-flex; align-items: center; gap: 7px;
     color: var(--ink) !important; border: 1.5px solid var(--offset-col);
@@ -298,14 +301,13 @@
     padding: 14px 22px; border-radius: 10px; font-weight: 700; font-size: 16px;
     text-decoration: none; border: 1px solid transparent; cursor: pointer;
   }
-  /* buttons share the hard-offset block; --btn-sh/--btn-edge default to the card
-     offset (ink in light, black in dark) and flip to cream inside dark sections */
+  /* orange buttons extrude in a deeper shade of themselves (--btn-3d) so the
+     block reads on light OR dark backgrounds; ghost buttons stay flat */
   .btn-primary { background: var(--hero-accent); color: #17120a;
-    border: 1.5px solid var(--btn-edge, var(--offset-col)); box-shadow: 4px 4px 0 var(--btn-sh, var(--offset-col)); }
-  .btn-primary:hover { filter: brightness(1.04); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--btn-sh, var(--offset-col)); }
+    border: 1.5px solid var(--btn-3d-edge); box-shadow: 4px 4px 0 var(--btn-3d); }
+  .btn-primary:hover { filter: brightness(1.04); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--btn-3d); }
   .btn-ghost { background: transparent; color: var(--hero-ink); border-color: rgba(243,241,234,.25); }
   .btn-ghost:hover { border-color: rgba(243,241,234,.55); }
-  .hero, .lighting { --btn-sh: #f3f1ea; --btn-edge: rgba(0,0,0,.4); }
   .btn { transition: transform .18s ease, filter .18s ease, border-color .18s ease, box-shadow .18s ease; }
 
   .hero-badges {
@@ -433,7 +435,7 @@
   .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 480px) { .row2 { grid-template-columns: 1fr; } }
   form .btn-primary { background: var(--accent); color: var(--on-accent); width: 100%; justify-content: center; margin-top: 4px; }
-  form .btn-primary:hover { filter: brightness(1.04); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--btn-sh, var(--offset-col)); }
+  form .btn-primary:hover { filter: brightness(1.04); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--btn-3d); }
   .form-note { font-size: 13px; color: var(--muted); margin: 14px 0 0; text-align: center; }
 
   /* footer */
