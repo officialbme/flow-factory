@@ -8,21 +8,26 @@
 <link rel="canonical" href="https://flowfactoryteam.com/gallery.html">
 <meta name="theme-color" content="#12171d">
 <link rel="icon" type="image/png" href="assets/ff-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #edeae3; --surface: #f7f5f0; --ink: #1a2028; --muted: #5c6672; --line: #d7d3c9;
     --accent: #cf7f24; --on-accent: #1a2028; --hero-bg: #12171d; --hero-ink: #f3f1ea; --hero-muted: #9aa6b2; --hero-line: #2a333d;
     --maxw: 1120px;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
   }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
     --bg: #10151b; --surface: #171d25; --ink: #ecefee; --muted: #93a0ad; --line: #29313b; --accent: #e8983a; --on-accent: #12171d;
   } }
   :root[data-theme="dark"] { --bg: #10151b; --surface: #171d25; --ink: #ecefee; --muted: #93a0ad; --line: #29313b; --accent: #e8983a; --on-accent: #12171d; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.62; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
   a { color: inherit; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-  .display { font-family: "Helvetica Neue", "Arial Black", system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.04; }
+  .display { font-family: var(--font-display); font-weight: 900; font-optical-sizing: auto; letter-spacing: -0.015em; line-height: 1.04; }
   .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0; }
   header.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 66px; }
